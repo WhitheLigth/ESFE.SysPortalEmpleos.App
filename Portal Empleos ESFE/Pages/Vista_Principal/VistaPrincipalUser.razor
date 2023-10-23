@@ -1,9 +1,9 @@
 ﻿@page "/VistaPrincipalUser"
 
-<div class="top-row ps-3 navbar navbar-dark" style="background-color:rgb(78,115,223)">
+<div class="top-row ps-3 navbar navbar-dark" style="background-color:rgb(78,115,223);margin-left:-25px; width:463px; margin-top:-18px;">
 	<div class="container-fluid">
 		<div class="d-flex align-items-center">
-			<img src="img/esfe.png" class=" me-3" style="width:50px;" alt="Logo ESFE">
+			<img src="img/esfe.png" class="me-3" style="width:50px;" alt="Logo ESFE">
 			<a class="navbar-brand me-3" href="">Portal Empleos ESFE</a>
 		</div>
 		<button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
@@ -11,6 +11,8 @@
 		</button>
 	</div>
 </div>
+
+
 
 <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
 	<nav class="flex-column">
@@ -42,7 +44,7 @@
 	</nav>
 </div>
 
-<footer style="position: absolute; bottom: 0; width: 100%; text-align: center;">
+<footer class="text-center fixed-bottom">
 	<p>&copy; 2023 ESFE/Agape <br />  Todos los derechos reservados.</p>
 </footer>
 
