@@ -1,0 +1,77 @@
+﻿@page "/Login"
+
+<body class="bg-gradient-primary">
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div class="container">
+
+
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+
+            <div class="col-xl-10 col-lg-12 col-md-9">
+
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+
+                            <div class="text-center">
+                                <img src="img/esfe.png" alt="Logo ESFE" class="mb-4">
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="p-1 text-center">
+                                    <div class="text-center">
+                                        <h1 style="font-size:35px;" class="h4 text-gray-900 mb-4">Inicio de Sesion</h1>
+                                    </div>
+                                    <form class="user">
+                                        <div style="width:300px; height:40px;" class="form-group">
+                                            <input style="margin-left:40px; font-size:23px" type="email" class="form-control text-center"
+                                                   id="exampleInputEmail" aria-describedby="emailHelp"
+                                                   placeholder="Ingresar correo">
+                                        </div>
+                                        <br />
+                                        <div style="width:300px; height:40px;" class="form-group">
+                                            <input style="margin-left:40px; font-size:23px" type="password" class="form-control text-center"
+                                                   id="exampleInputPassword" placeholder="Contraseña">
+                                        </div>
+                                        <br />
+                                        <br />
+
+                                        <NavLink style="width:300px; height:40px; " class=" btn btn-primary" href="VistaPrincipal">
+                                            <span style="font-size:23px; " aria-hidden="true">Iniciar Sesion</span>
+                                        </NavLink>
+                                        <br />
+                                        <br />
+
+                                        <NavLink class="text-center mt-4" href="https://docs.google.com/forms/d/e/1FAIpQLSf_BNmrXeJw0ho-A5t1trV1zIIMwDRHLBsSaE73izwna2EIkg/viewform?pli=1">
+                                            <span style="font-size:15px; " aria-hidden="true">¿Olvidaste tu Contraseña?</span>
+                                        </NavLink>
+
+                                    </form>
+                                    <hr>
+
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="text-center mt-4">
+                            <p>&copy; 2023 ESFE/Agape</p>
+                            <p>Todos los derechos reservados</p>
+                        </footer>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+@code {
+
+}
