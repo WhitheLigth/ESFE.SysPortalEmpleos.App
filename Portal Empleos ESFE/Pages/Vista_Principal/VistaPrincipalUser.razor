@@ -1,10 +1,12 @@
 ﻿@page "/VistaPrincipalUser"
 
-<div class="top-row ps-3 navbar navbar-dark" style="background-color:rgb(78,115,223);margin-left:-25px; width:463px; margin-top:-18px;">
+@* Logo y Titulo del Nav-Menu *@
+
+<div class="top-row ps-3 navbar navbar-dark" style="background-color:rgb(78,115,223); padding-left:22px; width:465px; margin-top:-18px;">
     <div class="container-fluid">
         <div class="d-flex align-items-center">
             <img src="img/esfe.png" class="me-3" style="width:50px;" alt="Logo ESFE">
-            <a class="navbar-brand me-3" href="">Portal Empleos ESFE</a>
+            <a class="navbar-brand me-3" href="VistaPrincipalUser" style="font-weight: bold">Portal Empleos ESFE</a>
         </div>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
@@ -13,35 +15,38 @@
 </div>
 
 
-<div class="@NavMenuCssClass" @onclick="ToggleNavMenu" style="background-color:rgb(78, 115, 223, 0.2);margin-left:-25px; width:463px;">
-    <nav class="flex-column" style="padding-bottom:10px; padding-top:10px;">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Técnico en Ingeniería Electrica
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Técnico en Mercadeo
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Técnico en Gestion y Desarrollo Turistico
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Técnico en Ingeniería de Desarrollo de Software
-            </NavLink>
-        </div>
-    </nav>
+<div class="position-fixed" style="background-color: rgba(78, 115, 223, 0.8); width: 463px; z-index: 1000;">
+    <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+        <nav class="flex-column" style="padding-bottom: 10px; padding-top: 10px;">
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="*" Match="NavLinkMatch.All" style="color:white; font-weight: bold">
+                    <span class="oi oi-home" aria-hidden="true" style="color:white"></span> Inicio
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="*" style="color:white; font-weight: bold">
+                    <span class="oi oi-list-rich" aria-hidden="true" style="color:white"></span> Técnico en Ingeniería Electrica
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="*" style="color:white;font-weight: bold">
+                    <span class="oi oi-list-rich" aria-hidden="true" style="color:white"></span> Técnico en Mercadeo
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="*" style="color:white; font-weight: bold">
+                    <span class="oi oi-list-rich" aria-hidden="true" style="color:white"></span> Técnico en Gestion y Desarrollo Turistico
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="*" style="color:white; font-weight: bold">
+                    <span class="oi oi-list-rich" aria-hidden="true" style="color:white"></span> Técnico en Ingeniería de Desarrollo de Software
+                </NavLink>
+            </div>
+        </nav>
+    </div>
 </div>
+
 
 <br />
 <br />
@@ -82,6 +87,26 @@
         </div>
     </div>
 </div>
+
+<section style="background-color: rgba(78, 115, 223, 0.9); position: fixed; bottom: 0; width: 100%; height: auto; z-index: 1; height:50px; margin-left:5px">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html" style="color:white; font-size:20px; padding-top:15px; font-weight: bold;">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html" style=" color:white; font-size:20px; padding-top:15px; font-weight: bold;">Espacio por Asignar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html" style="color:white; font-size:20px; padding-top:15px; font-weight: bold;">Tu Cuenta</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 
 <br />
 <br />
