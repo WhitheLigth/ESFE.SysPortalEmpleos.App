@@ -1,0 +1,8 @@
+﻿<maui:MauiWinUIApplication
+    x:Class="Portal_Empleos_ESFE.WinUI.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:maui="using:Microsoft.Maui"
+    xmlns:local="using:Portal_Empleos_ESFE.WinUI">
+
+</maui:MauiWinUIApplication>
