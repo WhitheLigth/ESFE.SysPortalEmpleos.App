@@ -2,7 +2,7 @@
 
 @* Logo y Titulo del Nav-Menu *@
 
-<div class="top-row ps-3 navbar navbar-dark" style="background-color:rgb(78,115,223); padding-left:22px; width:465px; margin-top:-18px;">
+<div class="top-row ps-3 navbar navbar-dark" style="background-color:rgb(78,115,223); margin-left:-25px; width:451px; margin-top:-18px;">
     <div class="container-fluid">
         <div class="d-flex align-items-center">
             <img src="img/esfe.png" class="me-3" style="width:50px;" alt="Logo ESFE">
@@ -15,7 +15,7 @@
 </div>
 
 
-<div class="position-fixed" style="background-color: rgba(78, 115, 223, 0.8); width: 463px; z-index: 1000;">
+<div class="position-fixed" style="background-color: rgba(78, 115, 223, 0.8); margin-left:-25px; width: 463px; z-index: 1000;">
     <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
         <nav class="flex-column" style="padding-bottom: 10px; padding-top: 10px;">
             <div class="nav-item px-3">
@@ -46,7 +46,32 @@
         </nav>
     </div>
 </div>
+<br />
+<br />
 
+<div class="container">
+    <h1 class="text-center" style="font-weight: bold">Tecnico en Servicios Turisticos</h1>
+</div>
+
+<br />
+<br />
+<div class="container" style="box-shadow: -8px -8px 20px -6px rgba(0, 0, 0, 0.2), 8px -8px 20px -6px rgba(0, 0, 0, 0.2), -8px 8px 20px -6px rgba(0, 0, 0, 0.2), 8px 8px 20px -6px rgba(0, 0, 0, 0.2);">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/img/fondo.png" class="card-img-top" alt="Imagen">
+                <div class="card-body">
+                    <h5 class="card-title">Tu Fuente de Noticias Laborales Relevantes</h5>
+                    <p class="card-text">
+                        JobSpot <br />  Mantente al tanto de las últimas noticias laborales que importan.
+                        Con JobSpot, nuestra aplicación de publicación de ofertas de trabajo, recibirás actualizaciones diarias
+                        ¡Encuentra el trabajo de tus sueños con información actualizada y relevante en JobSpot!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <br />
 <br />
@@ -70,43 +95,10 @@
 
 <br />
 <br />
-<div class="container" style="box-shadow: -8px -8px 20px -6px rgba(0, 0, 0, 0.2), 8px -8px 20px -6px rgba(0, 0, 0, 0.2), -8px 8px 20px -6px rgba(0, 0, 0, 0.2), 8px 8px 20px -6px rgba(0, 0, 0, 0.2);">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card">
-                <img src="/img/fondo.png" class="card-img-top" alt="Imagen">
-                <div class="card-body">
-                    <h5 class="card-title">Tu Fuente de Noticias Laborales Relevantes</h5>
-                    <p class="card-text">
-                        JobSpot <br />  Mantente al tanto de las últimas noticias laborales que importan.
-                        Con JobSpot, nuestra aplicación de publicación de ofertas de trabajo, recibirás actualizaciones diarias
-                        ¡Encuentra el trabajo de tus sueños con información actualizada y relevante en JobSpot!
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-<section style="background-color: rgba(78, 115, 223, 0.9); position: fixed; bottom: 0; width: 100%; height: auto; z-index: 1; height:50px; margin-left:5px">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/index.html" style="color:white; font-size:20px; padding-top:15px; font-weight: bold;">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/index.html" style=" color:white; font-size:20px; padding-top:15px; font-weight: bold;">Espacio por Asignar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/index.html" style="color:white; font-size:20px; padding-top:15px; font-weight: bold;">Tu Cuenta</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
+<footer class="text-center">
+    <p>&copy; 2023 ESFE/Agape <br /> Todos los derechos reservados.</p>
+</footer>
 
 
 @code {
