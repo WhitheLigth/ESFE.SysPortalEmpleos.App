@@ -1,0 +1,110 @@
+﻿@page "/VistaConfiguracionUser"
+
+@* Logo y Titulo del Nav-Menu *@
+
+<div class="top-row ps-3 navbar navbar-dark" style="background-color:rgb(78,115,223); margin-left:-25px; width:451px; margin-top:-18px;">
+    <div class="container-fluid">
+        <div class="d-flex align-items-center">
+            <img src="img/esfe.png" class="me-3" style="width:50px;" alt="Logo ESFE">
+            <a class="navbar-brand me-3" href="VistaPrincipalUser" style="font-weight: bold">Portal Empleos ESFE</a>
+        </div>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+
+<div class="position-fixed" style="background-color: rgba(78, 115, 223, 0.8); margin-left:-25px; width: 463px; z-index: 1000;">
+    <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+        <nav class="flex-column" style="padding-bottom: 10px; padding-top: 10px;">
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="VistaPrincipalUser" Match="NavLinkMatch.All" style="color:white; font-weight: bold">
+                    <span class="oi oi-home" aria-hidden="true" style="color:white"></span> Inicio
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="VistaDeElectricalUser" style="color:white; font-weight: bold">
+                    <span class="oi oi-list-rich" aria-hidden="true" style="color:white"></span> Técnico en Ingeniería Electrica
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="VistaDeMercadeoUser" style="color:white;font-weight: bold">
+                    <span class="oi oi-list-rich" aria-hidden="true" style="color:white"></span> Técnico en Mercadeo
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="VistaDeTurismoUser" style="color:white; font-weight: bold">
+                    <span class="oi oi-list-rich" aria-hidden="true" style="color:white"></span> Técnico en Gestion y Desarrollo Turistico
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="VistaDeSoftwareUser" style="color:white; font-weight: bold">
+                    <span class="oi oi-list-rich" aria-hidden="true" style="color:white"></span> Técnico en Ingeniería de Desarrollo de Software
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="VistaConfiguracionUser" style="color:white; font-weight: bold">
+                    <span class="oi oi-list-rich" aria-hidden="true" style="color:white"></span> Configuracion
+                </NavLink>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<br />
+
+
+<div class="container">
+    <h1  class="text-center" style="font-weight: bold">Configuración</h1>
+    <div class="row">
+        <div class="col-12 col-md-6 mb-3">
+            <div class="card">
+                <div class="card-body btn " style="background-color: rgba(78, 115, 223, 0.8);">
+                    <a style="color:white; font-size:20px; text-decoration:none;" href="#">Cuenta</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 mb-3">
+            <div class="card  btn " style="background-color: rgba(78, 115, 223, 0.8);">
+                <div class="card-body">
+                    <a style="color:white; font-size:20px; text-decoration:none;" href="#">Configuración</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 mb-3">
+            <div class="card btn " style="background-color: rgba(78, 115, 223, 0.8);">
+                <div class="card-body">
+                    <a style="color:white; font-size:20px; text-decoration:none;" href="#">Información</a>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top:450px;" class="col-12 col-md-6 mb-3">
+            <div class="card  btn " style="background-color: rgba(78, 115, 223, 0.8);">
+                <div class="card-body">
+                    <a style="color:white; font-size:20px; text-decoration:none;" href="#">Cerrar sesión</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<footer class="text-center">
+    <p>&copy; 2023 ESFE/Agape <br /> Todos los derechos reservados.</p>
+</footer>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}
