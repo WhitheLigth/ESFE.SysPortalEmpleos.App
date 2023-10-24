@@ -15,7 +15,7 @@
 </div>
 
 
-<div class="position-fixed" style="background-color: rgba(78, 115, 223, 0.8); width: 463px; z-index: 1000;">
+<div class="position-fixed" style="background-color: rgba(78, 115, 223, 0.8); margin-left:-25px; width: 463px; z-index: 1000;">
     <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
         <nav class="flex-column" style="padding-bottom: 10px; padding-top: 10px;">
             <div class="nav-item px-3">
@@ -141,28 +141,9 @@
 <br />
 <br />
 
-
-
-<section style="background-color: rgba(78, 115, 223, 0.9); position: fixed; bottom: 0; width: 100%; height: auto; z-index: 1; height:50px; margin-left:5px">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/index.html" style="color:white; font-size:20px; padding-top:15px; font-weight: bold;">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/index.html" style=" color:white; font-size:20px; padding-top:15px; font-weight: bold;">Espacio por Asignar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/index.html" style="color:white; font-size:20px; padding-top:15px; font-weight: bold;">Tu Cuenta</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
+<footer class="text-center">
+    <p>&copy; 2023 ESFE/Agape <br /> Todos los derechos reservados.</p>
+</footer>
 
 @code {
     private bool collapseNavMenu = true;
