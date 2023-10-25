@@ -1,17 +1,16 @@
-﻿<div class="top-row ps-3 navbar navbar-dark position-fixed" style="background-color:rgb(78,115,223); margin-left:-25px; width:451px; margin-top:-18px; z-index: 1000;">
+﻿<div class="top-row ps-3 navbar navbar-dark position-fixed" style="background-color:rgb(78,115,223); margin-left:-25px; width:auto; margin-top:-18px; z-index: 1000;">
     <div class="container-fluid">
         <div class="d-flex align-items-center">
-            <img src="img/esfe.png" class="me-3" style="width:50px;" alt="Logo ESFE">
-            <a class="navbar-brand me-3" href="VistaPrincipalUser" style="font-weight: bold">Portal Empleos ESFE</a>
+            <img src="img/esfe.png" class="ms-3 me-5" style="width:50px;" alt="Logo ESFE">
+            <a class="navbar-brand me-5" href="VistaPrincipalUser" style="font-weight: bold">Portal Empleos ESFE</a>
         </div>
-        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
-            <span class="navbar-toggler-icon"></span>
+        <button title="Navigation menu " class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon "></span>
         </button>
     </div>
 </div>
-<br />
-<br />
-<div class="position-fixed" style="background-color: rgba(78, 115, 223, 0.8); margin-left:-25px; width: 463px; z-index: 1000;">
+ 
+<div class="position-fixed" style="background-color: rgba(78, 115, 223, 0.8); margin-left:-25px; margin-top:44px; width: 465px; z-index: 1000;">
     <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
         <nav class="flex-column" style="padding-bottom: 10px; padding-top: 10px;">
             <div class="nav-item px-3">
