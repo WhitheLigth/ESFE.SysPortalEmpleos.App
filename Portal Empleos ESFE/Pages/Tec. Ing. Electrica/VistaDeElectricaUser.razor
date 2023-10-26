@@ -1,5 +1,14 @@
 ﻿@page "/VistaDeElectricalUser"
 
+@using Portal_Empleos_ESFE.Models;
+@using Portal_Empleos_ESFE.Service;
+
+@using System.Net.Http.Json;
+@using System.Threading.Tasks;
+@using Portal_Empleos_ESFE.Service.Electrica;
+
+@inject IElectricaService service
+
 @* Logo y Titulo del Nav-Menu *@
 
 <NavMenu />
@@ -7,50 +16,44 @@
 <br />
 <br />
 
-<div class="container">
-    <h1 class="text-center" style="font-weight: bold">Tecnico en Ingenieria Electrica</h1>
-</div>
+@if (electricaMostrar == null)
+{
+    <p><em>Cargando....</em></p>
+}
+else
+{
 
-<br />
-<br />
-<div class="container" style="box-shadow: -8px -8px 20px -6px rgba(0, 0, 0, 0.2), 8px -8px 20px -6px rgba(0, 0, 0, 0.2), -8px 8px 20px -6px rgba(0, 0, 0, 0.2), 8px 8px 20px -6px rgba(0, 0, 0, 0.2);">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card">
-                <img src="/img/fondo.png" class="card-img-top" alt="Imagen">
-                <div class="card-body">
-                    <h5 class="card-title">Tu Fuente de Noticias Laborales Relevantes</h5>
-                    <p class="card-text">
-                        JobSpot <br />  Mantente al tanto de las últimas noticias laborales que importan.
-                        Con JobSpot, nuestra aplicación de publicación de ofertas de trabajo, recibirás actualizaciones diarias
-                        ¡Encuentra el trabajo de tus sueños con información actualizada y relevante en JobSpot!
-                    </p>
+    
+        <br />
+        <br />
+
+        <div class="container">
+            <h1 class="text-center" style="font-weight: bold">Tecnico en Ingenieria Electrica</h1>
+        </div>
+
+        <br />
+        <br />
+    @foreach (var result in electricaMostrar)
+    {
+        <div class="container" style="box-shadow: -8px -8px 20px -6px rgba(0, 0, 0, 0.2), 8px -8px 20px -6px rgba(0, 0, 0, 0.2), -8px 8px 20px -6px rgba(0, 0, 0, 0.2), 8px 8px 20px -6px rgba(0, 0, 0, 0.2);">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="@result.Imagen" class="card-img-top mt-2" alt="Imagen">
+                        <div class="card-body">
+                            <h5 class="card-title"> @result.Titulo</h5>
+                            <p class="card-text">
+                                 @result.Descripcion
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
-<br />
-<br />
-<div class="container" style="box-shadow: -8px -8px 20px -6px rgba(0, 0, 0, 0.2), 8px -8px 20px -6px rgba(0, 0, 0, 0.2), -8px 8px 20px -6px rgba(0, 0, 0, 0.2), 8px 8px 20px -6px rgba(0, 0, 0, 0.2);">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card">
-                <img src="/img/fondo.png" class="card-img-top" alt="Imagen">
-                <div class="card-body">
-                    <h5 class="card-title">Tu Fuente de Noticias Laborales Relevantes</h5>
-                    <p class="card-text">
-                        JobSpot <br />  Mantente al tanto de las últimas noticias laborales que importan.
-                        Con JobSpot, nuestra aplicación de publicación de ofertas de trabajo, recibirás actualizaciones diarias
-                        ¡Encuentra el trabajo de tus sueños con información actualizada y relevante en JobSpot!
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
+        <br />
+        <br />
+    }
+}
 <Footer />
 
 
@@ -63,5 +66,13 @@
     private void ToggleNavMenu()
     {
         collapseNavMenu = !collapseNavMenu;
+    }
+
+    //Consumo de la API
+    private List<ElectricaModel> electricaMostrar;
+
+    protected override async Task OnInitializedAsync()
+    {
+        electricaMostrar = await service.Get();
     }
 }
