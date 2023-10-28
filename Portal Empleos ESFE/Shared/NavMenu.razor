@@ -1,4 +1,59 @@
-﻿<div class="top-row ps-3 navbar navbar-dark position-fixed" style="background-color:rgb(78,115,223); margin-left:-25px; width:auto; margin-top:-18px; z-index: 1000;">
+﻿<div class="top-row ps-3 navbar navbar-dark" style="background-color: rgb(78, 115, 223);position: fixed; top: 0; left: 0; right: 0; z-index: 100;">
+    <div class="container-fluid">
+        <img src="img/esfe.png" class="ms-3 me-5" style="width: 50px;" alt="Logo ESFE">
+        <a class="navbar-brand me-5" href="VistaPrincipalUser" style="font-weight: bold">Portal Empleos ESFE</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+
+<div style="background-color: rgba(78, 115, 223, 0.8); position: fixed; top: 63px; left: 0; right: 0; z-index: 100;" class=" @NavMenuCssClass" @onclick="ToggleNavMenu">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+
+            <NavLink class="nav-link" href="VistaPrincipalUser" Match="NavLinkMatch.All" style="color:white; font-weight: bold">
+                <span class="oi oi-home" aria-hidden="true" style="color:white"></span> Inicio
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="VistaDeTurismoUser" style="color:white; font-weight: bold">
+                <span class="oi oi-list-rich" aria-hidden="true" style="color:white"></span> Técnico en Gestion y Desarrollo Turistico
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="VistaDeElectricalUser" style="color:white; font-weight: bold">
+                <span class="oi oi-list-rich" aria-hidden="true" style="color:white"></span> Técnico en Ingeniería Electrica
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="VistaDeMercadeoUser" style="color:white;font-weight: bold">
+                <span class="oi oi-list-rich" aria-hidden="true" style="color:white"></span> Técnico en Mercadeo
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="VistaDeSoftwareUser" style="color:white; font-weight: bold">
+                <span class="oi oi-list-rich" aria-hidden="true" style="color:white"></span> Técnico en Ingeniería de Desarrollo de Software
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="VistaConfiguracionUser" style="color:white; font-weight: bold">
+                <span class="oi oi-cog" aria-hidden="true" style="color:white"></span>  Configuracion
+            </NavLink>
+        </div>
+    </nav>
+</div>
+
+
+
+<!--
+    <div class="top-row ps-3 navbar navbar-dark position-fixed" style="background-color:rgb(78,115,223); margin-left:-25px; width:auto; margin-top:-18px; z-index: 1000;">
     <div class="container-fluid">
         <div class="d-flex align-items-center">
             <img src="img/esfe.png" class="ms-3 me-5" style="width:50px;" alt="Logo ESFE">
@@ -9,7 +64,10 @@
         </button>
     </div>
 </div>
- 
+
+
+
+
 <div class="position-fixed" style="background-color: rgba(78, 115, 223, 0.8); margin-left:-25px; margin-top:44px; width: 465px; z-index: 1000;">
     <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
         <nav class="flex-column" style="padding-bottom: 10px; padding-top: 10px;">
@@ -18,35 +76,15 @@
                     <span class="oi oi-home" aria-hidden="true" style="color:white"></span> Inicio
                 </NavLink>
             </div>
-            <div class="nav-item px-3">
-                <NavLink class="nav-link" href="VistaDeElectricalUser" style="color:white; font-weight: bold">
-                    <span class="oi oi-list-rich" aria-hidden="true" style="color:white"></span> Técnico en Ingeniería Electrica
-                </NavLink>
-            </div>
-            <div class="nav-item px-3">
-                <NavLink class="nav-link" href="VistaDeMercadeoUser" style="color:white;font-weight: bold">
-                    <span class="oi oi-list-rich" aria-hidden="true" style="color:white"></span> Técnico en Mercadeo
-                </NavLink>
-            </div>
-            <div class="nav-item px-3">
-                <NavLink class="nav-link" href="VistaDeTurismoUser" style="color:white; font-weight: bold">
-                    <span class="oi oi-list-rich" aria-hidden="true" style="color:white"></span> Técnico en Gestion y Desarrollo Turistico
-                </NavLink>
-            </div>
-            <div class="nav-item px-3">
-                <NavLink class="nav-link" href="VistaDeSoftwareUser" style="color:white; font-weight: bold">
-                    <span class="oi oi-list-rich" aria-hidden="true" style="color:white"></span> Técnico en Ingeniería de Desarrollo de Software
-                </NavLink>
-            </div>
-            <div class="nav-item px-3">
-                <NavLink class="nav-link" href="VistaConfiguracionUser" style="color:white; font-weight: bold">
-                    <span class="oi oi-cog" aria-hidden="true" style="color:white"></span>  Configuracion
-                </NavLink>
-            </div>
+
+
+
+
         </nav>
     </div>
 </div>
 
+-->
 @code {
     private bool collapseNavMenu = true;
 
