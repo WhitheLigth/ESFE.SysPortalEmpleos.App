@@ -18,6 +18,17 @@
 
 @if (electricaMostrar == null)
 {
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <div class="text-center">
         <div class="spinner-border" role="status">
             <span class="sr-only"></span>
@@ -39,26 +50,28 @@ else
         <br />
     @foreach (var result in electricaMostrar)
     {
-        <div class="container text-center" style="box-shadow: -8px -8px 20px -6px rgba(0, 0, 0, 0.2), 8px -8px 20px -6px rgba(0, 0, 0, 0.2), -8px 8px 20px -6px rgba(0, 0, 0, 0.2), 8px 8px 20px -6px rgba(0, 0, 0, 0.2);">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="@result.Imagen" class="card-img-top mt-2" alt="Imagen">
-                        <div class="card-body">
-                            <h5 class="card-title"> @result.Titulo</h5>
-                            <p class="card-text">
-                                 @result.Descripcion
-                            </p>
+        <div class="container px-4">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card shadow-lg">
+                            <img src="@result.Imagen" class="card-img-top mt-2" alt="Imagen">
+                            <div class="card-body">
+                                <h5 class="card-title"> @result.Titulo</h5>
+                                <p class="card-text">
+                                    @result.Descripcion
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <br />
+                <NavLink style="width:300px; height:40px; " class=" btn btn-primary mb-1" href="*">
+                    <span style="font-size:23px;" aria-hidden="true">Aplicar</span>
+                </NavLink>
+                <br />
+                <br />
             </div>
-            <br />
-            <NavLink style="width:300px; height:40px; " class=" btn btn-primary mb-1" href="*">
-                <span style="font-size:23px;" aria-hidden="true">Aplicar</span>
-            </NavLink>
-            <br />
-            <br />
         </div>
         <br />
         <br />
